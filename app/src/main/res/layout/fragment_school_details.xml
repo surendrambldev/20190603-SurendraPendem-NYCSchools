@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:shimmer="http://schemas.android.com/tools" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blue_gray"
+        android:orientation="vertical"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:id="@+id/header"
+            android:background="@color/colorWhite"
+            android:elevation="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    >
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#020D44"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Women's Academy of Excellence"
+                android:fontFamily="@font/hind_siliguri_semibold"/>
+
+        <TextView
+                android:id="@+id/total_test_takers"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2F3346"
+                tools:text="Total test Takers: 38"
+                android:fontFamily="@font/hind_siliguri_light"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"
+    >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/scores_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginTop="10dp"
+            >
+
+                <TextView
+                        android:id="@+id/math_score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_abacus"
+                        android:background="@color/colorWhite"
+                        android:padding="10dp"
+                        android:elevation="4dp"
+                        android:textSize="38sp"
+                        android:fontFamily="@font/nunito_sans"
+                        android:textColor="#020D44"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                />
+
+                <TextView
+                        android:id="@+id/writing_Score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_writing"
+                        android:background="@color/colorWhite"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        tools:text="198"
+                        android:elevation="4dp"
+                        android:textSize="38sp"
+                        android:fontFamily="@font/nunito_sans"
+                        android:textColor="#020D44"
+                        android:gravity="center"
+                />
+
+                <TextView
+                        android:id="@+id/reading_Score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_reading"
+                        android:background="@color/colorWhite"
+                        android:layout_marginStart="5dp"
+                        android:padding="10dp"
+                        tools:text="195"
+                        android:elevation="4dp"
+                        android:textSize="38sp"
+                        android:fontFamily="@font/nunito_sans"
+                        android:textColor="#020D44"
+                        android:gravity="center"
+                        android:layout_marginEnd="5dp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="4dp"
+                    android:layout_marginTop="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020D44"
+                        android:textSize="24sp"
+                        android:text="Overview"
+                        android:fontFamily="@font/hind_siliguri_semibold"/>
+
+                <TextView
+                        android:id="@+id/overview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2F3346"
+                        tools:text="97%"
+                        android:fontFamily="@font/hind_siliguri_light"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="4dp"
+                    android:layout_marginTop="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020D44"
+                        android:textSize="24sp"
+                        android:text="Total Students"
+                        android:fontFamily="@font/hind_siliguri_semibold"/>
+
+                <TextView
+                        android:id="@+id/total_students"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2F3346"
+                        tools:text="97%"
+                        android:fontFamily="@font/hind_siliguri_light"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="4dp"
+                    android:layout_marginTop="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020D44"
+                        android:textSize="24sp"
+                        android:text="Attendance Rate"
+                        android:fontFamily="@font/hind_siliguri_semibold"/>
+
+                <TextView
+                        android:id="@+id/attendance_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2F3346"
+                        tools:text="CUNY College Now, Technology, Model UN, Student Government, School Leadership Team, Music, School Musical, National Honor Society, The Clinton Post (School Newspaper), Clinton Soup (Literary Magazine), GLSEN, Glee"
+                        android:fontFamily="@font/hind_siliguri_light"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="4dp"
+                    android:layout_marginTop="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020D44"
+                        android:textSize="24sp"
+                        android:text="Extracurricular Activities"
+                        android:fontFamily="@font/hind_siliguri_semibold"/>
+
+                <TextView
+                        android:id="@+id/activities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2F3346"
+                        tools:text="CUNY College Now, Technology, Model UN, Student Government, School Leadership Team, Music, School Musical, National Honor Society, The Clinton Post (School Newspaper), Clinton Soup (Literary Magazine), GLSEN, Glee"
+                        android:fontFamily="@font/hind_siliguri_light"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="4dp"
+                    android:layout_marginTop="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020D44"
+                        android:textSize="24sp"
+                        android:text="Website"
+                        android:fontFamily="@font/hind_siliguri_semibold"/>
+
+                <TextView
+                        android:id="@+id/website_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2F3346"
+                        tools:text="CUNY College Now, Technology, Model UN, Student Government, School Leadership Team, Music, School Musical, National Honor Society, The Clinton Post (School Newspaper), Clinton Soup (Literary Magazine), GLSEN, Glee"
+                        android:fontFamily="@font/hind_siliguri_light"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="4dp"
+                    android:layout_marginTop="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020D44"
+                        android:textSize="24sp"
+                        android:text="Location"
+                        android:fontFamily="@font/hind_siliguri_semibold"/>
+
+                <TextView
+                        android:id="@+id/location_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2F3346"
+                        tools:text="10 East 15th Street, Manhattan NY 10003"
+                        android:fontFamily="@font/hind_siliguri_light"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@color/colorWhite"
+                    android:elevation="4dp"
+                    android:layout_marginTop="10dp"
+            >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#020D44"
+                        android:textSize="24sp"
+                        android:text="Phone"
+                        android:fontFamily="@font/hind_siliguri_semibold"/>
+
+                <TextView
+                        android:id="@+id/phone_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2F3346"
+                        android:text="10 East 15th Street, Manhattan NY 10003"
+                        android:fontFamily="@font/hind_siliguri_light"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="10dp"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/details_shimmer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:elevation="4dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            shimmer:duration="800">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <include layout="@layout/layout_shimmer_details"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

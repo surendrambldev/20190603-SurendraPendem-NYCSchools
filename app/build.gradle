@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: '../dependencies.gradle'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.jpmc.nycschools"
+        minSdkVersion 22
+        targetSdkVersion 28
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // android support libraries
+    implementation libs.androidSupport.supportV4
+    implementation libs.androidSupport.compat
+    implementation libs.androidSupport.appCompat
+    implementation libs.androidSupport.cardview
+    implementation libs.androidSupport.customtabs
+    implementation libs.androidSupport.design
+    implementation libs.androidSupport.gridlayout
+    implementation libs.androidSupport.recyclerview
+    implementation libs.lifecycle.extensions
+
+
+    // other android support libraries
+    implementation libs.androidSupport.multidex
+    implementation libs.androidSupport.constraintLayout
+    implementation libs.kotlin.stdlib
+    implementation libs.coroutines.android
+    implementation libs.retrofit.coroutines
+    //http libraries
+    implementation libs.okhttp3.okhttp
+    implementation libs.okhttp3.logginginterceptor
+    implementation libs.retrofit.main
+    implementation libs.retrofit.gson
+    implementation libs.retrofit.scalar
+
+    // Koin for Android
+    implementation libs.koin.android
+
+    // or Koin for Lifecycle scoping
+    implementation libs.koin.androidScope
+
+    // or Koin for Android Architecture ViewModel
+    implementation libs.koin.androidViewModel
+    implementation libs.koin.java
+
+    // testing libraries
+    testImplementation libs.arch.coreTesting
+    testImplementation libs.mockito.core
+    testImplementation libs.mockito.inline
+    testImplementation libs.koin.test
+    testImplementation libs.mockito.kotlin
+    testImplementation libs.junit
+    testImplementation libs.arch.pagingTesting
+    implementation libs.arch.navfrag
+    implementation libs.arch.nav
+    implementation libs.arch.paging
+    implementation libs.facebook.shimmer
+    testImplementation libs.okhttp3.mockwebserver
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}

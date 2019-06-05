@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NYCSchools</string>
+    <string name="search">Search</string>
+    <string name="school_location_format">%1s, %2s</string>
+    <string name="school_location_detailsformat">%1s, %2s, %3s - %4s</string>
+    <string name="attendance_percentage">%d%%</string>
+    <string name="total_test_takers_format">Total test takers:%s</string>
+    <string name="no_results">No results found</string>
+</resources>

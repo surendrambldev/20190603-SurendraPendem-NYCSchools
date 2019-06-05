@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="1dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/content_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:selectableItemBackground"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/school_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#020D44"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Women's Academy of Excellence"
+                    android:fontFamily="@font/hind_siliguri_semibold"/>
+
+            <TextView
+                    android:id="@+id/school_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/school_name"
+                    android:textColor="#2F3346"
+                    android:fontFamily="@font/hind_siliguri_light"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_lite_gray"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:background="@color/colorWhite"
+                android:weightSum="4"
+        >
+            <ImageView
+                    android:id="@+id/call_school"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_phone"
+                    android:padding="1dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:selectableItemBackgroundBorderless"
+            />
+            <ImageView
+                    android:id="@+id/email_school"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_email"
+                    android:padding="1dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:selectableItemBackgroundBorderless"
+            />
+            <ImageView
+                    android:id="@+id/school_website"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_worldwide"
+                    android:padding="1dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:selectableItemBackgroundBorderless"
+            />
+            <ImageView
+                    android:id="@+id/nav_to_school"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_map"
+                    android:padding="1dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:selectableItemBackgroundBorderless"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

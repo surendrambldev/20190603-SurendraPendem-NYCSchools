@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#212121</color>
+    <color name="exp_status_green">#66bb6a</color>
+    <color name="exp_status_orange">#ff8a65</color>
+    <color name="color_black">#040404</color>
+    <color name="color_lite_black">#E6312E2E</color>
+    <color name="color_gray">#6F6C6C</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorLiteWhite">#F0FFFFFF</color>
+    <color name="color_lite_gray">#F0F0EDED</color>
+    <color name="color_blue_gray">#eceff1</color>
+    <color name="shimmer_bg">#dddddd</color>
+</resources>
